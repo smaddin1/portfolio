@@ -1,0 +1,209 @@
+.home {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  /* Add any additional styling you need for the entire home section */
+}
+
+
+
+.left-section {
+  flex: 1; /* The left section takes up 50% of the available space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  /* Add styling for the left section, such as background color or padding */
+}
+.circle-image {
+  width: 450px; /* Set your desired circle size */
+  height: 450px; /* Make sure the width and height are the same for a perfect circle */
+  background-color: #cd9457; /* Circle background color */
+  border-radius: 50%; /* Makes it a circle */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden; /* Hide any parts of the image that extend outside the circle */
+  margin-top: 150px; /* Add space from the top */
+  margin-bottom: 50px; /* Add space from the bottom */
+  margin-left: 200px; /* Add space from the left */
+  
+}
+
+.circle-image img {
+  max-width: 100%; /* Make sure the image fits within the circle */
+  max-height: 100%; /* Maintain aspect ratio */
+}
+
+.right-section {
+  flex: 1; /* The right section takes up 50% of the available space */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Center content vertically */
+  justify-content: flex-start; 
+  /* Add styling for the right section */
+}
+
+.about h1 {
+  font-size: 100px; /* Adjust the font size as needed */
+  /* Other CSS styles for the "about" section */
+ margin: 0;
+
+}
+
+
+.about h2 {
+  margin :0;
+  font-size: 30px;
+}
+
+
+
+
+
+.link-circle {
+  display: flex; /* Make sure circles are in a row */
+  margin: 5px 15px;
+}
+
+.circle-Resume {
+  background-color: #cd9457; /* Resume circle background color */
+}
+
+.circle-Projects {
+  background-color: #ff5733; /* Projects circle background color */
+}
+
+.circle-Contact {
+  background-color: #3399ff; /* Contact circle background color */
+}
+
+.circle-Resume,
+.circle-Projects,
+.circle-Contact {
+  width: 130px; /* Set your desired circle size */
+  height: 130px; /* Make sure the width and height are the same for a perfect circle */
+ 
+  border-radius: 50%; /* Makes it a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth color transition on hover */
+  margin-right: 20px; 
+}
+
+.circle-Resume:hover,
+.circle-Projects:hover,
+.circle-Contact:hover  {
+  background-color: #e3bbbb; /* Change the background color on hover */
+}
+.circle-Resume a,
+.circle-Projects a,
+.circle-Contact a {
+  text-decoration: none;
+}
+
+
+
+
+.text {
+  color: #201d1d;
+  font-size: 20px; /* Text color */
+}
+
+.prompt p{
+  max-width: 600px;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+  .home {
+    flex-direction: column; /* Change to a column layout for smaller screens */
+  }
+  .left-section,
+  .right-section {
+    width: 100%; /* Ensure each section takes up 100% width in column layout */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+  }
+  .left-section {
+    align-items: center; /* Vertically centers the content */
+    margin-left: 0; /* Resets the left margin for mobile */
+  }
+
+  .right-section {
+    order:-1;
+    align-items: center; /* Vertically centers the content */
+  }
+  .circle-image{
+    width: 85%; /* Adjusted size for mobile */
+    height: auto; /* Height auto for aspect ratio */
+    max-width: 400px; /* Maximum width limitation */
+    max-height: 400px; /* Maximum height limitation */
+    margin: 20px auto; /* Margin top/bottom and auto for left/right */
+  }
+  .circle-image img {
+    width: 100%; /* Ensure the image scales down to fit the circle */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .link-circle {
+    flex-direction: row; /* Stack the circles vertically */
+    align-items: center; /* Center the circles horizontally */
+    margin: 10px 0; /* Vertical spacing between circles */
+    justify-content: center;
+    
+  }
+  .circle-Resume,
+  .circle-Projects,
+  .circle-Contact {
+    width: 100px; /* Smaller size for mobile */
+    height: 100px; /* Smaller size for mobile */
+    margin: 10px; /* Smaller margin for mobile */
+  }
+  .circle-Resume:hover,
+  .circle-Projects:hover,
+  .circle-Contact:hover  {
+    background-color: #e3bbbb; /* Change the background color on hover */
+  }
+
+  .circle-Resume a,
+  .circle-Projects a,
+  .circle-Contact a {
+    text-decoration: none;
+  }
+  .text {
+    font-size: 16px; /* Smaller text for mobile */
+  }
+
+  .left-section {
+    order: 1; /* Places left-section below right-section */
+  }
+  .prompt p{
+    max-width: 300px;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+
+  /* Additional centering for the right section's content if needed */
+  .about, .skills {
+    width: 100%; /* Full width for the containers */
+    text-align: center; /* Center text */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items to center for flex container */
+  }
+  
+}

@@ -1,0 +1,170 @@
+.navbar {
+  display: flex;
+  align-items: center; /* Vertically center items in the navbar */
+  justify-content: space-between;
+  background-color: #e6edef;
+  padding: 10px 0;
+}
+
+.left-content {
+  display: flex;
+  align-items: center; /* Vertically center circle and text */
+  margin-left: 50px;
+}
+ .links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 800px;  /*You can adjust this value based on your preference */
+  width: 100%;
+  margin-right: 50px;
+
+}
+
+
+.circle-navbar {
+  width: 40px; /* Set your desired width for the circle */
+  height: 40px; /* Make sure the width and height are the same for a perfect circle */
+  background-color: #cd9457;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px; /* Adjust spacing between circle and text */
+  overflow: hidden; /* Hide any parts of the image that extend outside the circle */
+}
+
+.circle-navbar img {
+  width: 100%; /* Set the width to 100% to match the circle width */
+  height: 100%; /* Set the height to 100% to match the circle height */
+  border-radius: 50%; /* Make the image circular */
+}
+
+/* Adjust text alignment for "Nicol Rider" and "Resume| Project|Contact" */
+.name {
+  text-decoration: none;
+  margin: 5px 5px; /* Adjust margin for spacing */
+  color: #414420;
+  font-weight: bold;
+  font-size: 26px;
+  transition: color 0.2s;
+  text-align: left;
+}
+.name:hover{
+  color:#FFD700
+}
+
+.navLink {
+  text-decoration: none;
+  margin: 5px 15px; /* Adjust this value for spacing between links */
+  color: #000; /* Black text color, adjust if necessary */
+  font-size: 14px; /* Adjust font size as necessary */
+  transition: color 0.2s;
+  text-align: right;
+}
+.navLink:hover {
+  color: #FFD700; /* Gold color on hover, adjust as necessary */
+}
+
+.separator {
+  margin: 5px 10px; /* Adjust this value for spacing between separators and links */
+  color: #000; /* Black separator color, adjust if necessary */
+}
+
+.toggleButton {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.toggleButton svg {
+  font-size: 50px;
+}
+.toggleButton button {
+  margin-right: 20px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#open {
+  height: 60vh;
+}
+
+#open .links {
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 0px;
+}
+
+#open a {
+  width: 5%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .navbar a {
+    width: 70px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .toggleButton {
+    display: flex;
+  }
+  #open .links{
+    display: none;
+  }
+  #close .links {
+    flex-direction: row;
+    margin-right: 0px; 
+    justify-content: center;
+  }
+  #close .navLinks :hover{
+    color:#FFD700
+    
+  }
+  #close .navLink{
+    margin: 1px 0px; /* Adjust this value for spacing between links */
+
+  }
+  #close .separator{
+    margin: 1px 0px;
+  }
+  #close .toggleButton{
+    display: none;
+  }
+  #close .left-content{
+    margin-left: 2px;
+  }
+  .name{
+    display:none;
+  }
+
+  
+  #open {
+    height: 10vh; /* Adjust this value as needed */
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .toggleButton {
+    display: none;
+  }
+
+  .hiddenLinks {
+    display: none;
+  }
+
+  #open {
+    height: 50px;
+  }
+
+  #open .links {
+    flex-direction: row;
+  }
+}
